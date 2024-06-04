@@ -30,7 +30,7 @@ const Navbar = () => {
         >
           
           <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
-          <p className='text-white text-[18px]
+          <p className='text-white text-[18px] md:text-[16px]
           font-bold cursor-pointer flex'>MriaTorres &nbsp; <span className='sm:block hidden'>| FullStack Developer </span></p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
@@ -42,7 +42,7 @@ const Navbar = () => {
                 active === Link.title
                 ? "text-white"
                 : "text-secondary"
-              } hover:text-white text-[18px]
+              } hover:text-white text-[18px] sm:text-[14px]
               font-medium cursor-pointer`}
               onClick={() => setActive(Link.title)}>
 
@@ -83,6 +83,10 @@ const Navbar = () => {
               <a href={`#${Link.id}`}>{Link.title}</a>
             </li>
           ))}
+
+            <li>
+              <LanguageSelector />
+            </li>
           </ul>
 
           </div>
